@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "task-tracker"
+version = "0.1.0"
+description = "FastAPI task tracker example with Postgres - SFAutomation"
+authors = ["SFAutomation <noreply@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.100.0"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+sqlalchemy = "^2.0.0"
+psycopg2-binary = "^2.9.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.scripts]
+start-app = "uvicorn:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
